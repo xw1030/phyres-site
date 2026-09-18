@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   CheckCircle2,
+  ChevronDown,
   Cpu,
   Database,
   ExternalLink,
@@ -80,6 +81,26 @@ const platforms = [
   'NPUs & AI accelerators',
   'Embedded GPUs',
 ];
+const evaluatedPlatforms = [
+  {
+    platform: 'NVIDIA Jetson Nano GPU',
+    workload: 'CNN inference',
+    capability:
+      'Architecture and model-information leakage through electromagnetic side-channel analysis',
+  },
+  {
+    platform: 'Edge GPU platforms',
+    workload: 'DNN inference',
+    capability:
+      'Neural-network weight and workload leakage evaluation under physical access',
+  },
+  {
+    platform: 'Commercial DNN accelerator',
+    workload: 'Accelerated inference',
+    capability:
+      'Physical side-channel evaluation of model-extraction attack scenarios',
+  },
+];
 const team = [
   [
     'Lejla Batina',
@@ -118,30 +139,93 @@ export default function Home() {
             </span>
             <span className="text-[15px] font-semibold tracking-[-0.02em]">
               AI Hardware Security{' '}
-              <span className="ml-2 font-mono text-[9px] font-medium uppercase tracking-[0.14em] text-[#58708f]">
+              <span className="ml-2 hidden font-mono text-[9px] font-medium uppercase tracking-[0.14em] text-[#58708f] 2xl:inline">
                 Independent evaluation
               </span>
             </span>
           </a>
           <nav
-            className="hidden items-center gap-8 text-sm font-medium text-[#526987] md:flex"
+            className="hidden items-center gap-7 text-sm font-medium text-[#526987] lg:flex"
             aria-label="Primary navigation"
           >
+            <div className="group relative">
+              <a
+                className="flex items-center gap-1 py-6 transition-colors hover:text-[#0b1830]"
+                href="#solutions"
+              >
+                Solutions <ChevronDown className="size-3.5" />
+              </a>
+              <div className="invisible absolute left-0 top-[62px] z-50 w-64 translate-y-2 border border-[#17335f]/10 bg-white p-2 opacity-0 shadow-[0_18px_50px_rgba(9,29,67,.14)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <a
+                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  href="#fault-injection"
+                >
+                  Fault injection & integrity
+                </a>
+                <a
+                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  href="#physical-leakage"
+                >
+                  Physical leakage
+                </a>
+                <a
+                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  href="#mitigation"
+                >
+                  Mitigation & retesting
+                </a>
+              </div>
+            </div>
+            <div className="group relative">
+              <a
+                className="flex items-center gap-1 py-6 transition-colors hover:text-[#0b1830]"
+                href="#support"
+              >
+                Support <ChevronDown className="size-3.5" />
+              </a>
+              <div className="invisible absolute left-0 top-[62px] z-50 w-52 translate-y-2 border border-[#17335f]/10 bg-white p-2 opacity-0 shadow-[0_18px_50px_rgba(9,29,67,.14)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <a
+                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  href="#support"
+                >
+                  Technical support
+                </a>
+                <a
+                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  href="#training"
+                >
+                  Training
+                </a>
+              </div>
+            </div>
             <a
-              className="transition-colors hover:text-[#0b1830]"
-              href="#services"
+              className="py-6 transition-colors hover:text-[#0b1830]"
+              href="#evaluated-platforms"
             >
-              Services
+              Evaluated platforms
             </a>
-            <a
-              className="transition-colors hover:text-[#0b1830]"
-              href="#process"
-            >
-              Process
-            </a>
-            <a className="transition-colors hover:text-[#0b1830]" href="#team">
-              Team
-            </a>
+            <div className="group relative">
+              <a
+                className="flex items-center gap-1 py-6 transition-colors hover:text-[#0b1830]"
+                href="#about-us"
+              >
+                Our company <ChevronDown className="size-3.5" />
+              </a>
+              <div className="invisible absolute right-0 top-[62px] z-50 w-48 translate-y-2 border border-[#17335f]/10 bg-white p-2 opacity-0 shadow-[0_18px_50px_rgba(9,29,67,.14)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                <a
+                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  href="#about-us"
+                >
+                  About us
+                </a>
+                <a
+                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  href="#investors"
+                >
+                  Our investors
+                </a>
+              </div>
+            </div>
           </nav>
           <a
             href="mailto:xuewang1129@hotmail.com?subject=AI%20hardware%20security%20evaluation"
@@ -184,7 +268,7 @@ export default function Home() {
                 Discuss an evaluation <ArrowRight />
               </a>
               <a
-                href="#services"
+                href="#solutions"
                 className={cn(
                   buttonVariants({ variant: 'outline', size: 'lg' }),
                   'h-12 rounded-md border-[#1d4d82]/20 bg-white/70 px-6 text-[#0b2451] hover:bg-white',
@@ -285,8 +369,8 @@ export default function Home() {
       </section>
 
       <section
-        id="services"
-        className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12"
+        id="solutions"
+        className="mx-auto max-w-7xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28 lg:px-12"
       >
         <div className="grid gap-8 lg:grid-cols-[.65fr_1.35fr] lg:gap-16">
           <div>
@@ -305,6 +389,13 @@ export default function Home() {
               ({ icon: Icon, number, title, description, detail }) => (
                 <Card
                   key={title}
+                  id={
+                    number === '01'
+                      ? 'fault-injection'
+                      : number === '02'
+                        ? 'physical-leakage'
+                        : 'mitigation'
+                  }
                   className="rounded-lg border-0 bg-white py-0 shadow-[0_14px_45px_rgba(9,37,81,.07)] ring-1 ring-[#12366b]/8"
                 >
                   <CardContent className="grid gap-5 p-6 sm:grid-cols-[48px_1fr_auto] sm:items-center sm:p-7">
@@ -331,6 +422,60 @@ export default function Home() {
                 </Card>
               ),
             )}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="evaluated-platforms"
+        className="scroll-mt-20 border-y border-[#17335f]/10 bg-white"
+      >
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12">
+          <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
+            <div>
+              <p className="eyebrow">Evaluation experience</p>
+              <h2 className="section-title mt-4">
+                Platforms tested in our research.
+              </h2>
+              <p className="mt-6 max-w-md text-sm leading-6 text-[#5b6c82]">
+                These platforms demonstrate technical capability and research
+                experience. They do not imply vendor endorsement, certification,
+                or a commercial customer relationship.
+              </p>
+            </div>
+            <div className="overflow-hidden border border-[#17335f]/10">
+              {evaluatedPlatforms.map((item, index) => (
+                <div
+                  key={item.platform}
+                  className="grid gap-3 border-b border-[#17335f]/10 bg-[#f8fafc] p-5 last:border-b-0 sm:grid-cols-[.8fr_.6fr_1.6fr] sm:items-start sm:p-6"
+                >
+                  <div>
+                    <span className="font-mono text-[9px] text-[#8091a8]">
+                      0{index + 1}
+                    </span>
+                    <p className="mt-1 text-sm font-semibold text-[#0b2451]">
+                      {item.platform}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-[9px] uppercase tracking-[.12em] text-[#8091a8]">
+                      AI workload
+                    </p>
+                    <p className="mt-2 text-xs text-[#53657d]">
+                      {item.workload}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-mono text-[9px] uppercase tracking-[.12em] text-[#8091a8]">
+                      Demonstrated capability
+                    </p>
+                    <p className="mt-2 text-xs leading-5 text-[#53657d]">
+                      {item.capability}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -372,7 +517,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
+      <section
+        id="support"
+        className="mx-auto max-w-7xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28 lg:px-12"
+      >
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <p className="eyebrow">Where it matters</p>
@@ -405,7 +553,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-10 rounded-2xl border border-[#38bdf8]/20 bg-[#38bdf8]/8 p-5">
+            <div
+              id="training"
+              className="mt-10 scroll-mt-28 rounded-lg border border-[#38bdf8]/20 bg-[#38bdf8]/8 p-5"
+            >
               <p className="flex items-center gap-2 text-sm font-semibold text-[#c9edff]">
                 <Sparkles className="size-4" /> Complementary training
               </p>
@@ -419,7 +570,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="team" className="border-y border-[#17335f]/10 bg-white">
+      <section
+        id="about-us"
+        className="scroll-mt-20 border-y border-[#17335f]/10 bg-white"
+      >
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
             <div>
@@ -458,6 +612,25 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="investors"
+        className="scroll-mt-20 border-b border-[#17335f]/10 bg-[#eef3f9]"
+      >
+        <div className="mx-auto grid max-w-7xl gap-6 px-5 py-12 sm:px-8 md:grid-cols-[.75fr_1.25fr] md:items-center lg:px-12">
+          <div>
+            <p className="eyebrow">Our investors</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-[-.035em] text-[#081b3c]">
+              Investment partnerships in development.
+            </h2>
+          </div>
+          <p className="text-sm leading-6 text-[#5b6c82]">
+            The company is currently at the pre-seed stage. Confirmed investors
+            and funding partners will be published here once agreements are
+            complete.
+          </p>
         </div>
       </section>
 
