@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'AI Hardware Security | Independent Evaluation',
-  description: 'Independent fault-injection, execution-integrity and physical-leakage evaluation for AI running on real hardware.',
+  description:
+    'Independent fault-injection, execution-integrity and physical-leakage evaluation for AI running on real hardware.',
 };
 
 export default function RootLayout({
