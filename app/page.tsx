@@ -3,6 +3,7 @@ import {
   CheckCircle2,
   Cpu,
   Database,
+  ExternalLink,
   Gauge,
   LockKeyhole,
   Mail,
@@ -83,16 +84,23 @@ const team = [
   [
     'Lejla Batina',
     'Physical hardware security, side-channel analysis and fault injection',
+    'https://www.cs.ru.nl/~lejla/',
   ],
   [
     'Péter Horváth',
     'Physical attacks and information leakage from neural networks and GPUs',
+    'https://www.ru.nl/en/people/horvath-p',
   ],
   [
     'Zhuoran Liu',
     'AI security, privacy, adversarial machine learning and hardware security',
+    'https://liuzrcc.github.io/',
   ],
-  ['Xue Wang', 'Economics, AI, data science and commercial strategy'],
+  [
+    'Xue Wang',
+    'Economics, AI, data science and commercial strategy',
+    'mailto:xuewang1129@hotmail.com',
+  ],
 ];
 
 export default function Home() {
@@ -431,9 +439,18 @@ export default function Home() {
               </div>
             </div>
             <div className="grid gap-px overflow-hidden rounded-lg border border-[#0c2a58]/10 bg-[#0c2a58]/10 sm:grid-cols-2">
-              {team.map(([name, focus]) => (
+              {team.map(([name, focus, profile]) => (
                 <div key={name} className="bg-[#f8fafc] p-6 sm:p-7">
-                  <p className="text-base font-semibold">{name}</p>
+                  <a
+                    href={profile}
+                    target={profile.startsWith('http') ? '_blank' : undefined}
+                    rel={profile.startsWith('http') ? 'noreferrer' : undefined}
+                    className="inline-flex items-center gap-2 text-base font-semibold text-[#0b2451] underline decoration-[#38bdf8] decoration-2 underline-offset-4 transition-colors hover:text-[#1269c7]"
+                    aria-label={`Open ${name}'s profile`}
+                  >
+                    {name}
+                    <ExternalLink className="size-3.5" />
+                  </a>
                   <p className="mt-2 text-sm leading-6 text-[#60738c]">
                     {focus}
                   </p>
