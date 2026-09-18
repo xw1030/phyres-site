@@ -104,22 +104,26 @@ const evaluatedPlatforms = [
 const team = [
   [
     'Lejla Batina',
-    'Physical hardware security, side-channel analysis and fault injection',
+    'Co-founder · Founding Scientific Advisor',
+    'Professor of Digital Security at Radboud University, specializing in the security of small devices. Her research covers applied cryptography, embedded hardware security, side-channel analysis, fault injection and countermeasures, with a growing focus on the intersection of AI and physical hardware security. She contributes scientific direction, evaluation methodology and access to a leading hardware-security research network.',
     'https://www.cs.ru.nl/~lejla/',
   ],
   [
     'Péter Horváth',
-    'Physical attacks and information leakage from neural networks and GPUs',
+    'Co-founder · Technical Lead',
+    'PhD candidate in Digital Security at Radboud University whose research directly investigates physical attacks against neural networks and AI accelerators. His work includes extracting neural-network architecture and weight information from GPU execution through electromagnetic side channels. He leads the translation of these attack methods into reproducible evaluation workflows for customer hardware.',
     'https://www.ru.nl/en/people/horvath-p',
   ],
   [
     'Zhuoran Liu',
-    'AI security, privacy, adversarial machine learning and hardware security',
+    'Co-founder · Founding Scientific Advisor',
+    'Assistant Professor in the Parallel Computing Systems group at the University of Amsterdam. His research sits at the intersection of AI, security and privacy, including adversarial machine learning, side-channel analysis and fault injection. He connects physical measurements and induced faults to their implications for AI models, sensitive data and system behaviour.',
     'https://liuzrcc.github.io/',
   ],
   [
     'Xue Wang',
-    'Economics, AI, data science and commercial strategy',
+    'Co-founder · Business and Strategy',
+    'Combines a background in economics with experience in AI and data science. She leads commercial strategy, market validation, financing and the development of a scalable business model. Her role is to translate technical findings into customer-relevant evidence about feasibility, exposure and business impact, while building relationships with customers, investors and innovation partners.',
     'mailto:xuewang1129@hotmail.com',
   ],
 ];
@@ -593,7 +597,7 @@ export default function Home() {
               </div>
             </div>
             <div className="grid gap-px overflow-hidden rounded-lg border border-[#0c2a58]/10 bg-[#0c2a58]/10 sm:grid-cols-2">
-              {team.map(([name, focus, profile]) => (
+              {team.map(([name, role, bio, profile]) => (
                 <div key={name} className="bg-[#f8fafc] p-6 sm:p-7">
                   <a
                     href={profile}
@@ -605,9 +609,10 @@ export default function Home() {
                     {name}
                     <ExternalLink className="size-3.5" />
                   </a>
-                  <p className="mt-2 text-sm leading-6 text-[#60738c]">
-                    {focus}
+                  <p className="mt-2 font-mono text-[9px] font-semibold uppercase tracking-[.12em] text-[#1269c7]">
+                    {role}
                   </p>
+                  <p className="mt-4 text-sm leading-6 text-[#60738c]">{bio}</p>
                 </div>
               ))}
             </div>
