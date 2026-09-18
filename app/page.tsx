@@ -105,26 +105,30 @@ const team = [
   [
     'Lejla Batina',
     'Co-founder · Founding Scientific Advisor',
-    'Professor of Digital Security at Radboud University, specializing in the security of small devices. Her research covers applied cryptography, embedded hardware security, side-channel analysis, fault injection and countermeasures, with a growing focus on the intersection of AI and physical hardware security. She contributes scientific direction, evaluation methodology and access to a leading hardware-security research network.',
+    'Hardware security · Side-channel analysis · Fault injection',
+    'Professor of Digital Security at Radboud University, where her professorial chair is Security of Small Devices. Her research covers secure implementations of cryptography, embedded-device security, side-channel attacks, fault injection and countermeasures. Her recent work increasingly connects AI with hardware security. She contributes scientific direction, physical-evaluation methodology and an established hardware-security research network.',
     'https://www.cs.ru.nl/~lejla/',
   ],
   [
     'Péter Horváth',
     'Co-founder · Technical Lead',
-    'PhD candidate in Digital Security at Radboud University whose research directly investigates physical attacks against neural networks and AI accelerators. His work includes extracting neural-network architecture and weight information from GPU execution through electromagnetic side channels. He leads the translation of these attack methods into reproducible evaluation workflows for customer hardware.',
+    'Neural-network leakage · GPU attacks · Evaluation methodology',
+    'PhD candidate in Digital Security at Radboud University researching physical attacks against neural networks and AI accelerators. His work has demonstrated the extraction of neural-network architecture and weight information from GPU execution through electromagnetic side channels. He leads the translation of research attacks into reproducible evaluation workflows for real hardware.',
     'https://www.ru.nl/en/people/horvath-p',
   ],
   [
     'Zhuoran Liu',
     'Co-founder · Founding Scientific Advisor',
-    'Assistant Professor in the Parallel Computing Systems group at the University of Amsterdam. His research sits at the intersection of AI, security and privacy, including adversarial machine learning, side-channel analysis and fault injection. He connects physical measurements and induced faults to their implications for AI models, sensitive data and system behaviour.',
+    'AI security & privacy · Adversarial ML · Physical attacks',
+    'Assistant Professor in the Parallel Computing Systems group at the University of Amsterdam. His research lies at the intersection of AI, security and privacy, including adversarial machine learning, side-channel analysis and fault injection. He connects physical measurements and induced faults to their implications for AI models, sensitive data and system behaviour.',
     'https://liuzrcc.github.io/',
   ],
   [
     'Xue Wang',
     'Co-founder · Business and Strategy',
-    'Combines a background in economics with experience in AI and data science. She leads commercial strategy, market validation, financing and the development of a scalable business model. Her role is to translate technical findings into customer-relevant evidence about feasibility, exposure and business impact, while building relationships with customers, investors and innovation partners.',
-    'mailto:xuewang1129@hotmail.com',
+    'Commercial strategy · Market validation · Risk translation',
+    'Combines a background in economics with experience in AI and data science. She leads commercial strategy, market validation, financing and development of the business model. Her role is to translate technical findings into customer-relevant evidence about feasibility, exposure and business impact, while building relationships with customers, investors and innovation partners.',
+    null,
   ],
 ];
 
@@ -597,22 +601,29 @@ export default function Home() {
               </div>
             </div>
             <div className="grid gap-px overflow-hidden rounded-lg border border-[#0c2a58]/10 bg-[#0c2a58]/10 sm:grid-cols-2">
-              {team.map(([name, role, bio, profile]) => (
+              {team.map(([name, role, highlight, bio, profile]) => (
                 <div key={name} className="bg-[#f8fafc] p-6 sm:p-7">
-                  <a
-                    href={profile}
-                    target={profile.startsWith('http') ? '_blank' : undefined}
-                    rel={profile.startsWith('http') ? 'noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 text-base font-semibold text-[#0b2451] underline decoration-[#38bdf8] decoration-2 underline-offset-4 transition-colors hover:text-[#1269c7]"
-                    aria-label={`Open ${name}'s profile`}
-                  >
-                    {name}
-                    <ExternalLink className="size-3.5" />
-                  </a>
+                  {profile ? (
+                    <a
+                      href={profile}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 text-base font-semibold text-[#0b2451] hover:text-[#1269c7]"
+                      aria-label={`Open ${name}'s profile`}
+                    >
+                      {name}
+                      <ExternalLink className="size-3.5 text-[#1269c7]" />
+                    </a>
+                  ) : (
+                    <p className="text-base font-semibold text-[#0b2451]">{name}</p>
+                  )}
                   <p className="mt-2 font-mono text-[9px] font-semibold uppercase tracking-[.12em] text-[#1269c7]">
                     {role}
                   </p>
-                  <p className="mt-4 text-sm leading-6 text-[#60738c]">{bio}</p>
+                  <p className="mt-5 text-sm font-semibold leading-6 text-[#0b2451]">
+                    {highlight}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-[#60738c]">{bio}</p>
                 </div>
               ))}
             </div>
