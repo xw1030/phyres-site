@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background); --color-foreground: var(--foreground); --font-sans: var(--font-geist-sans); --font-mono: var(--font-geist-mono); --font-heading: var(--font-sans);
+  --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring); --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-card: var(--card); --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground); --color-destructive: var(--destructive);
+  --radius-sm: calc(var(--radius) * 0.6); --radius-md: calc(var(--radius) * 0.8); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) * 1.4); --radius-2xl: calc(var(--radius) * 1.8); --radius-3xl: calc(var(--radius) * 2.2); --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #f7f8f5; --foreground: #102724; --card: #ffffff; --card-foreground: #102724; --popover: #ffffff; --popover-foreground: #102724;
+  --primary: #123c36; --primary-foreground: #f5ffe3; --secondary: #eaf1e6; --secondary-foreground: #173f38; --muted: #edf1ec; --muted-foreground: #5f7972;
+  --accent: #c9fb69; --accent-foreground: #123c36; --destructive: #b42318; --border: color-mix(in srgb, #123c36 13%, transparent); --input: color-mix(in srgb, #123c36 16%, transparent); --ring: #428779; --radius: 0.75rem;
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  html { @apply scroll-smooth font-sans; }
+  body { @apply bg-background text-foreground; }
+  a { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2; }
+}
+
+.signal-grid {
+  background-image: linear-gradient(to right, rgba(18, 60, 54, 0.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(18, 60, 54, 0.055) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: linear-gradient(to bottom, black, transparent 88%);
+}
+.eyebrow { font-family: var(--font-geist-mono), monospace; font-size: .68rem; font-weight: 650; letter-spacing: .16em; text-transform: uppercase; color: #2f7167; }
+.section-title { font-size: clamp(2.15rem, 4.2vw, 4.4rem); line-height: 1; letter-spacing: -.055em; font-weight: 650; color: #102f2b; }
+::selection { background: #c9fb69; color: #102f2b; }
