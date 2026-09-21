@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'AI Hardware Security | Independent Evaluation',
+  title: 'Phyres.ai | AI Hardware Security',
   description:
     'Independent fault-injection, execution-integrity and physical-leakage evaluation for AI running on real hardware.',
 };

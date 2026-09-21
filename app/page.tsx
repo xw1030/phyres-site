@@ -140,13 +140,13 @@ export default function Home() {
           <a
             href="#top"
             className="flex items-center gap-3"
-            aria-label="AI Hardware Security home"
+            aria-label="Phyres.ai home"
           >
             <span className="grid size-9 place-items-center rounded-xl bg-[#0b2451] text-[#38bdf8] shadow-sm">
               <Cpu className="size-5" />
             </span>
             <span className="text-[15px] font-semibold tracking-[-0.02em]">
-              AI Hardware Security{' '}
+              Phyres.ai{' '}
               <span className="ml-2 hidden font-mono text-[9px] font-medium uppercase tracking-[0.14em] text-[#58708f] 2xl:inline">
                 Independent evaluation
               </span>
@@ -695,7 +695,7 @@ export default function Home() {
               <span className="grid size-9 place-items-center rounded-xl bg-[#38bdf8] text-[#0b2451]">
                 <Cpu className="size-5" />
               </span>
-              <span className="font-semibold">AI Hardware Security</span>
+              <span className="font-semibold">Phyres.ai</span>
             </div>
             <p className="mt-4 max-w-md text-xs leading-5 text-[#a9bdd5]">
               Independent evaluation for the confidentiality, integrity, and
