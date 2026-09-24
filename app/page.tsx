@@ -107,7 +107,8 @@ const team = [
     'Co-founder · Founding Scientific Advisor',
     'Hardware security · Side-channel analysis · Fault injection',
     'Professor of Digital Security at Radboud University, where her professorial chair is Security of Small Devices. Her research covers secure implementations of cryptography, embedded-device security, side-channel attacks, fault injection and countermeasures. Her recent work increasingly connects AI with hardware security. She contributes scientific direction, physical-evaluation methodology and an established hardware-security research network.',
-    'https://www.cs.ru.nl/~lejla/',
+    'https://www.ru.nl/en/people/batina-l',
+    '/team/lejla-batina.png',
   ],
   [
     'Péter Horváth',
@@ -115,6 +116,7 @@ const team = [
     'Neural-network leakage · GPU attacks · Evaluation methodology',
     'PhD candidate in Digital Security at Radboud University researching physical attacks against neural networks and AI accelerators. His work has demonstrated the extraction of neural-network architecture and weight information from GPU execution through electromagnetic side channels. He leads the translation of research attacks into reproducible evaluation workflows for real hardware.',
     'https://www.ru.nl/en/people/horvath-p',
+    null,
   ],
   [
     'Zhuoran Liu',
@@ -122,12 +124,14 @@ const team = [
     'AI security & privacy · Adversarial ML · Physical attacks',
     'Assistant Professor in the Parallel Computing Systems group at the University of Amsterdam. His research lies at the intersection of AI, security and privacy, including adversarial machine learning, side-channel analysis and fault injection. He connects physical measurements and induced faults to their implications for AI models, sensitive data and system behaviour.',
     'https://liuzrcc.github.io/',
+    null,
   ],
   [
     'Xue Wang',
     'Co-founder · Business and Strategy',
     'Commercial strategy · Market validation · Risk translation',
     'Combines a background in economics with experience in AI and data science. She leads commercial strategy, market validation, financing and development of the business model. Her role is to translate technical findings into customer-relevant evidence about feasibility, exposure and business impact, while building relationships with customers, investors and innovation partners.',
+    null,
     null,
   ],
 ];
@@ -601,8 +605,25 @@ export default function Home() {
               </div>
             </div>
             <div className="grid gap-px overflow-hidden rounded-lg border border-[#0c2a58]/10 bg-[#0c2a58]/10 sm:grid-cols-2">
-              {team.map(([name, role, highlight, bio, profile]) => (
+              {team.map(([name, role, highlight, bio, profile, image]) => (
                 <div key={name} className="bg-[#f8fafc] p-6 sm:p-7">
+                  {image ? (
+                    <img
+                      src={image}
+                      alt={`${name} portrait`}
+                      className="mb-6 h-48 w-full rounded-md object-cover object-top"
+                    />
+                  ) : (
+                    <div
+                      className="mb-6 flex h-48 w-full items-center justify-center rounded-md bg-[#e7eef7] font-mono text-2xl font-semibold tracking-[.12em] text-[#48617e]"
+                      aria-hidden="true"
+                    >
+                      {name
+                        .split(' ')
+                        .map((part) => part[0])
+                        .join('')}
+                    </div>
+                  )}
                   {profile ? (
                     <a
                       href={profile}
