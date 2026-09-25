@@ -355,11 +355,27 @@ export default function Home() {
                         ? 'physical-leakage'
                         : 'mitigation'
                   }
-                  className="h-full rounded-lg border-0 bg-[#0d2a55] py-0 shadow-[0_14px_45px_rgba(0,0,0,.18)] ring-1 ring-white/10"
+                  className={cn(
+                    'h-full rounded-lg border-0 py-0 shadow-[0_14px_45px_rgba(0,0,0,.18)] ring-1',
+                    number === '01'
+                      ? 'bg-[#2a2418] ring-[#f59e0b]/20'
+                      : number === '02'
+                        ? 'bg-[#0d2a55] ring-white/10'
+                        : 'bg-[#0b3439] ring-[#2dd4bf]/20',
+                  )}
                 >
                   <CardContent className="flex h-full flex-col p-6 sm:p-7">
                     <div className="flex items-center justify-between gap-4">
-                      <span className="grid size-12 place-items-center rounded-lg bg-[#38bdf8]/10 text-[#38bdf8]">
+                      <span
+                        className={cn(
+                          'grid size-12 place-items-center rounded-lg',
+                          number === '01'
+                            ? 'bg-[#f59e0b]/10 text-[#fbbf24]'
+                            : number === '02'
+                              ? 'bg-[#38bdf8]/10 text-[#38bdf8]'
+                              : 'bg-[#2dd4bf]/10 text-[#5eead4]',
+                        )}
+                      >
                         <Icon />
                       </span>
                       <span className="font-mono text-[10px] text-[#91add0]">
@@ -388,7 +404,7 @@ export default function Home() {
 
       <section
         id="evaluated-platforms"
-        className="scroll-mt-20 border-y border-white/10 bg-[#081b3c]"
+        className="scroll-mt-20 border-y border-white/10 bg-[#101d33]"
       >
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12">
           <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
@@ -407,7 +423,7 @@ export default function Home() {
               {evaluatedPlatforms.map((item, index) => (
                 <div
                   key={item.platform}
-                  className="grid gap-3 border-b border-white/10 bg-[#0d2a55] p-5 last:border-b-0 sm:grid-cols-[.8fr_.6fr_1.6fr] sm:items-start sm:p-6"
+                  className="grid gap-3 border-b border-white/10 bg-[#182b44] p-5 last:border-b-0 sm:grid-cols-[.8fr_.6fr_1.6fr] sm:items-start sm:p-6"
                 >
                   <div>
                     <span className="font-mono text-[9px] text-[#91add0]">
@@ -442,7 +458,7 @@ export default function Home() {
 
       <section
         id="process"
-        className="border-y border-white/10 bg-[#0a2147]"
+        className="border-y border-[#2dd4bf]/15 bg-[#07343a]"
       >
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
           <p className="eyebrow">Integrated evaluation process</p>
@@ -459,7 +475,7 @@ export default function Home() {
             {process.map(([number, title, text], index) => (
               <div
                 key={title}
-                className="relative rounded-2xl border border-white/10 bg-[#0d2a55] p-5"
+                className="relative rounded-2xl border border-[#5eead4]/15 bg-[#0b4650] p-5"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[10px] font-semibold text-[#38bdf8]">
@@ -498,7 +514,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="rounded-xl bg-[#0c2a58] p-7 text-white sm:p-10">
+            <div className="rounded-xl border border-[#2dd4bf]/15 bg-[#0b3439] p-7 text-white sm:p-10">
             <p className="font-mono text-[10px] uppercase tracking-[0.17em] text-[#aebfd5]">
               Platforms in scope
             </p>
@@ -532,7 +548,7 @@ export default function Home() {
 
       <section
         id="about-us"
-        className="scroll-mt-20 border-y border-white/10 bg-[#081b3c]"
+        className="scroll-mt-20 border-y border-white/10 bg-[#111b2e]"
       >
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
@@ -554,7 +570,7 @@ export default function Home() {
             </div>
             <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
               {team.map(([name, role, highlight, bio, profile]) => (
-                <div key={name} className="bg-[#0d2a55] p-6 sm:p-7">
+                <div key={name} className="bg-[#18273a] p-6 sm:p-7">
                   {profile ? (
                     <a
                       href={profile}
@@ -585,7 +601,7 @@ export default function Home() {
 
       <section
         id="investors"
-        className="scroll-mt-20 border-b border-white/10 bg-[#0a2147]"
+        className="scroll-mt-20 border-b border-[#f59e0b]/15 bg-[#2a2418]"
       >
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-12 sm:px-8 md:grid-cols-[.75fr_1.25fr] md:items-center lg:px-12">
           <div>
@@ -603,7 +619,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
-        <div className="overflow-hidden rounded-xl border border-[#38bdf8]/25 bg-[#0d2a55] p-7 text-white sm:p-11 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-14">
+        <div className="overflow-hidden rounded-xl border border-[#2dd4bf]/25 bg-[#0b3439] p-7 text-white sm:p-11 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-14">
           <div>
             <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.17em]">
               What we are looking for
