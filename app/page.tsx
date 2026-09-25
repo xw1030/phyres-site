@@ -252,7 +252,7 @@ export default function Home() {
           src="/hero-em-signal.png"
           alt=""
           aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-center opacity-75"
+          className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-center opacity-75"
         />
         <div
           className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,21,47,.97)_0%,rgba(6,21,47,.82)_42%,rgba(6,21,47,.28)_78%,rgba(6,21,47,.5)_100%)]"
