@@ -3,10 +3,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Cpu,
-  Database,
   ExternalLink,
-  Gauge,
-  LockKeyhole,
   Mail,
   Microscope,
   Radar,
@@ -258,7 +255,7 @@ export default function Home() {
           className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,21,47,.97)_0%,rgba(6,21,47,.82)_42%,rgba(6,21,47,.28)_78%,rgba(6,21,47,.5)_100%)]"
           aria-hidden="true"
         />
-        <div className="relative mx-auto grid max-w-7xl gap-14 px-5 py-18 sm:px-8 sm:py-24 lg:grid-cols-[1.12fr_.88fr] lg:px-12 lg:py-30">
+        <div className="relative mx-auto flex min-h-[680px] max-w-7xl items-center px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
             <Badge className="mb-7 h-auto rounded-md border border-[#38bdf8]/30 bg-[#0b2451]/90 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#bceaff] shadow-sm">
               Physical security evaluation for AI hardware
@@ -290,66 +287,6 @@ export default function Home() {
               >
                 Explore our approach
               </a>
-            </div>
-          </div>
-
-          <div className="relative flex items-center justify-center lg:justify-end">
-            <div className="relative aspect-square w-full max-w-[520px] rounded-xl border border-white/10 bg-[#081b3c] p-6 text-white shadow-[0_24px_70px_rgba(9,29,67,.22)] sm:p-8">
-              <div className="absolute inset-0 rounded-xl bg-[linear-gradient(135deg,rgba(56,189,248,.12),transparent_42%)]" />
-              <div className="relative flex h-full flex-col justify-between">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#a9bed8]">
-                      Evaluation scope
-                    </p>
-                    <p className="mt-2 text-2xl font-medium tracking-tight">
-                      AI execution under attack
-                    </p>
-                  </div>
-                  <span className="rounded border border-[#38bdf8]/30 bg-[#38bdf8]/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-[#bceaff]">
-                    DUT / active
-                  </span>
-                </div>
-                <div className="space-y-3">
-                  {[
-                    [
-                      'Confidentiality',
-                      'Model · inputs · outputs',
-                      LockKeyhole,
-                    ],
-                    ['Integrity', 'Computation · decisions · controls', Gauge],
-                    [
-                      'Evidence',
-                      'Attack conditions · mitigation effect',
-                      Database,
-                    ],
-                  ].map(([title, desc, Icon]) => {
-                    const IconComponent = Icon as typeof LockKeyhole;
-                    return (
-                      <div
-                        key={title as string}
-                        className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[.055] p-4 backdrop-blur-sm"
-                      >
-                        <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#38bdf8] text-[#0b2451]">
-                          <IconComponent className="size-5" />
-                        </span>
-                        <div>
-                          <p className="text-sm font-semibold">
-                            {title as string}
-                          </p>
-                          <p className="mt-0.5 text-xs leading-5 text-[#b8c9df]">
-                            {desc as string}
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.13em] text-[#91add0]">
-                  <span className="size-2 rounded-full bg-[#38bdf8] shadow-[0_0_14px_#38bdf8]" />
-                  Research-backed · device-level · reproducible
-                </div>
-              </div>
             </div>
           </div>
         </div>
