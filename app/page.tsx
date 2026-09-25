@@ -615,7 +615,7 @@ export default function Home() {
                     />
                   ) : (
                     <div
-                      className="mb-6 flex h-48 w-full items-center justify-center rounded-md bg-[#e7eef7] font-mono text-2xl font-semibold tracking-[.12em] text-[#48617e]"
+                      className="mb-6 flex h-48 w-full items-center justify-center rounded-md bg-[#0b2451] font-mono text-2xl font-semibold tracking-[.12em] text-white"
                       aria-hidden="true"
                     >
                       {name
