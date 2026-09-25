@@ -36,24 +36,24 @@
 }
 
 :root {
-  --background: #f6f8fb;
-  --foreground: #0b1830;
-  --card: #ffffff;
-  --card-foreground: #0b1830;
-  --popover: #ffffff;
-  --popover-foreground: #0b1830;
-  --primary: #0b2451;
+  --background: #06152f;
+  --foreground: #eef6ff;
+  --card: #0d2a55;
+  --card-foreground: #eef6ff;
+  --popover: #0b2451;
+  --popover-foreground: #eef6ff;
+  --primary: #1269c7;
   --primary-foreground: #ffffff;
-  --secondary: #e8f1ff;
-  --secondary-foreground: #0c2a58;
-  --muted: #edf3fa;
-  --muted-foreground: #5f7189;
+  --secondary: #102f60;
+  --secondary-foreground: #dcecff;
+  --muted: #0c254e;
+  --muted-foreground: #a9bdd5;
   --accent: #38bdf8;
   --accent-foreground: #0b2451;
   --destructive: #b42318;
-  --border: color-mix(in srgb, #0b2451 13%, transparent);
-  --input: color-mix(in srgb, #0b2451 16%, transparent);
-  --ring: #1269c7;
+  --border: color-mix(in srgb, #ffffff 13%, transparent);
+  --input: color-mix(in srgb, #ffffff 16%, transparent);
+  --ring: #38bdf8;
   --radius: 0.5rem;
 }
 
@@ -74,8 +74,8 @@
 
 .signal-grid {
   background-image:
-    linear-gradient(to right, rgba(18, 74, 137, 0.055) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(18, 74, 137, 0.055) 1px, transparent 1px);
+    linear-gradient(to right, rgba(130, 199, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(130, 199, 255, 0.08) 1px, transparent 1px);
   background-size: 46px 46px;
   mask-image: linear-gradient(to bottom, black, transparent 88%);
 }
@@ -85,14 +85,14 @@
   font-weight: 650;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #1269c7;
+  color: #38bdf8;
 }
 .section-title {
   font-size: clamp(2.15rem, 4.2vw, 4.4rem);
   line-height: 1;
   letter-spacing: -0.055em;
   font-weight: 650;
-  color: #081b3c;
+  color: #f3f8ff;
 }
 ::selection {
   background: #38bdf8;

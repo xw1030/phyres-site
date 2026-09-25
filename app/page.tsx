@@ -138,8 +138,8 @@ const team = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f6f8fb] text-[#0b1830]">
-      <header className="sticky top-0 z-50 border-b border-[#17335f]/10 bg-[#f6f8fb]/90 backdrop-blur-xl">
+    <main className="min-h-screen overflow-x-hidden bg-[#06152f] text-[#eef6ff]">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06152f]/95 backdrop-blur-xl">
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
           <a
             href="#top"
@@ -151,37 +151,37 @@ export default function Home() {
             </span>
             <span className="text-[15px] font-semibold tracking-[-0.02em]">
               Phyres.ai{' '}
-              <span className="ml-2 hidden font-mono text-[9px] font-medium uppercase tracking-[0.14em] text-[#58708f] 2xl:inline">
+              <span className="ml-2 hidden font-mono text-[9px] font-medium uppercase tracking-[0.14em] text-[#91add0] 2xl:inline">
                 Independent evaluation
               </span>
             </span>
           </a>
           <nav
-            className="hidden items-center gap-7 text-sm font-medium text-[#526987] lg:flex"
+            className="hidden items-center gap-7 text-sm font-medium text-[#b8c9df] lg:flex"
             aria-label="Primary navigation"
           >
             <div className="group relative">
               <a
-                className="flex items-center gap-1 py-6 transition-colors hover:text-[#0b1830]"
+                className="flex items-center gap-1 py-6 transition-colors hover:text-white"
                 href="#solutions"
               >
                 Solutions <ChevronDown className="size-3.5" />
               </a>
-              <div className="invisible absolute left-0 top-[62px] z-50 w-64 translate-y-2 border border-[#17335f]/10 bg-white p-2 opacity-0 shadow-[0_18px_50px_rgba(9,29,67,.14)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div className="invisible absolute left-0 top-[62px] z-50 w-64 translate-y-2 border border-white/10 bg-[#0b2451] p-2 opacity-0 shadow-[0_18px_50px_rgba(0,0,0,.28)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                 <a
-                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  className="block rounded px-3 py-2.5 hover:bg-[#153b72] hover:text-white"
                   href="#fault-injection"
                 >
                   Fault injection & integrity
                 </a>
                 <a
-                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  className="block rounded px-3 py-2.5 hover:bg-[#153b72] hover:text-white"
                   href="#physical-leakage"
                 >
                   Physical leakage
                 </a>
                 <a
-                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  className="block rounded px-3 py-2.5 hover:bg-[#153b72] hover:text-white"
                   href="#mitigation"
                 >
                   Mitigation & retesting
@@ -190,20 +190,20 @@ export default function Home() {
             </div>
             <div className="group relative">
               <a
-                className="flex items-center gap-1 py-6 transition-colors hover:text-[#0b1830]"
+                className="flex items-center gap-1 py-6 transition-colors hover:text-white"
                 href="#support"
               >
                 Support <ChevronDown className="size-3.5" />
               </a>
-              <div className="invisible absolute left-0 top-[62px] z-50 w-52 translate-y-2 border border-[#17335f]/10 bg-white p-2 opacity-0 shadow-[0_18px_50px_rgba(9,29,67,.14)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div className="invisible absolute left-0 top-[62px] z-50 w-52 translate-y-2 border border-white/10 bg-[#0b2451] p-2 opacity-0 shadow-[0_18px_50px_rgba(0,0,0,.28)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                 <a
-                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  className="block rounded px-3 py-2.5 hover:bg-[#153b72] hover:text-white"
                   href="#support"
                 >
                   Technical support
                 </a>
                 <a
-                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  className="block rounded px-3 py-2.5 hover:bg-[#153b72] hover:text-white"
                   href="#training"
                 >
                   Training
@@ -211,27 +211,27 @@ export default function Home() {
               </div>
             </div>
             <a
-              className="py-6 transition-colors hover:text-[#0b1830]"
+              className="py-6 transition-colors hover:text-white"
               href="#evaluated-platforms"
             >
               Evaluated platforms
             </a>
             <div className="group relative">
               <a
-                className="flex items-center gap-1 py-6 transition-colors hover:text-[#0b1830]"
+                className="flex items-center gap-1 py-6 transition-colors hover:text-white"
                 href="#about-us"
               >
                 Our company <ChevronDown className="size-3.5" />
               </a>
-              <div className="invisible absolute right-0 top-[62px] z-50 w-48 translate-y-2 border border-[#17335f]/10 bg-white p-2 opacity-0 shadow-[0_18px_50px_rgba(9,29,67,.14)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div className="invisible absolute right-0 top-[62px] z-50 w-48 translate-y-2 border border-white/10 bg-[#0b2451] p-2 opacity-0 shadow-[0_18px_50px_rgba(0,0,0,.28)] transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                 <a
-                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  className="block rounded px-3 py-2.5 hover:bg-[#153b72] hover:text-white"
                   href="#about-us"
                 >
                   About us
                 </a>
                 <a
-                  className="block rounded px-3 py-2.5 hover:bg-[#eef3f9] hover:text-[#0b2451]"
+                  className="block rounded px-3 py-2.5 hover:bg-[#153b72] hover:text-white"
                   href="#investors"
                 >
                   Our investors
@@ -243,7 +243,7 @@ export default function Home() {
             href="mailto:xuewang1129@hotmail.com?subject=AI%20hardware%20security%20evaluation"
             className={cn(
               buttonVariants({ size: 'lg' }),
-              'h-10 rounded-md bg-[#0b2451] px-5 text-white hover:bg-[#173e78]',
+              'h-10 rounded-md bg-[#1269c7] px-5 text-white hover:bg-[#2380df]',
             )}
           >
             Start a conversation
@@ -251,21 +251,21 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="top" className="relative border-b border-[#17335f]/10">
+      <section id="top" className="relative border-b border-white/10 bg-[#06152f]">
         <div
           className="signal-grid absolute inset-0 opacity-65"
           aria-hidden="true"
         />
         <div className="relative mx-auto grid max-w-7xl gap-14 px-5 py-18 sm:px-8 sm:py-24 lg:grid-cols-[1.12fr_.88fr] lg:px-12 lg:py-30">
           <div className="max-w-3xl">
-            <Badge className="mb-7 h-auto rounded-md border border-[#1d5fa7]/20 bg-white/90 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#1d5fa7] shadow-sm">
+            <Badge className="mb-7 h-auto rounded-md border border-[#38bdf8]/30 bg-[#0b2451]/90 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#bceaff] shadow-sm">
               Physical security evaluation for AI hardware
             </Badge>
-            <h1 className="max-w-[780px] text-[clamp(3.15rem,6.5vw,6.4rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-[#081a3a]">
+            <h1 className="max-w-[780px] text-[clamp(3.15rem,6.5vw,6.4rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-[#f4f8ff]">
               Secure AI,
-              <span className="block text-[#1269c7]">down to the silicon.</span>
+              <span className="block text-[#38bdf8]">down to the silicon.</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-[#53657d] sm:text-xl">
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-[#b8c9df] sm:text-xl">
               We evaluate whether physical attacks can expose valuable AI models
               and sensitive data—or compromise AI execution on real hardware.
             </p>
@@ -283,7 +283,7 @@ export default function Home() {
                 href="#solutions"
                 className={cn(
                   buttonVariants({ variant: 'outline', size: 'lg' }),
-                  'h-12 rounded-md border-[#1d4d82]/20 bg-white/70 px-6 text-[#0b2451] hover:bg-white',
+                  'h-12 rounded-md border-white/20 bg-white/5 px-6 text-white hover:bg-white/10',
                 )}
               >
                 Explore our approach
@@ -390,7 +390,7 @@ export default function Home() {
             <h2 className="section-title mt-4">
               From physical signal to product decision.
             </h2>
-            <p className="mt-6 max-w-md text-base leading-7 text-[#53657d]">
+            <p className="mt-6 max-w-md text-base leading-7 text-[#b8c9df]">
               We do more than show that a signal or fault exists. We determine
               what it means for the AI workload, when an attack is feasible, and
               whether the fix is effective.
@@ -408,26 +408,26 @@ export default function Home() {
                         ? 'physical-leakage'
                         : 'mitigation'
                   }
-                  className="rounded-lg border-0 bg-white py-0 shadow-[0_14px_45px_rgba(9,37,81,.07)] ring-1 ring-[#12366b]/8"
+                  className="rounded-lg border-0 bg-[#0d2a55] py-0 shadow-[0_14px_45px_rgba(0,0,0,.18)] ring-1 ring-white/10"
                 >
                   <CardContent className="grid gap-5 p-6 sm:grid-cols-[48px_1fr_auto] sm:items-center sm:p-7">
-                    <span className="grid size-12 place-items-center rounded-lg bg-[#e8f1ff] text-[#135caa]">
+                    <span className="grid size-12 place-items-center rounded-lg bg-[#38bdf8]/10 text-[#38bdf8]">
                       <Icon />
                     </span>
                     <div>
                       <div className="flex items-baseline gap-3">
-                        <span className="font-mono text-[10px] text-[#8091a8]">
+                        <span className="font-mono text-[10px] text-[#91add0]">
                           {number}
                         </span>
                         <h3 className="text-lg font-semibold tracking-tight">
                           {title}
                         </h3>
                       </div>
-                      <p className="mt-2 max-w-2xl text-sm leading-6 text-[#5b6c82]">
+                      <p className="mt-2 max-w-2xl text-sm leading-6 text-[#b8c9df]">
                         {description}
                       </p>
                     </div>
-                    <p className="max-w-[175px] font-mono text-[10px] leading-5 uppercase tracking-[0.1em] text-[#708198] sm:text-right">
+                    <p className="max-w-[175px] font-mono text-[10px] leading-5 uppercase tracking-[0.1em] text-[#91add0] sm:text-right">
                       {detail}
                     </p>
                   </CardContent>
@@ -440,7 +440,7 @@ export default function Home() {
 
       <section
         id="evaluated-platforms"
-        className="scroll-mt-20 border-y border-[#17335f]/10 bg-white"
+        className="scroll-mt-20 border-y border-white/10 bg-[#081b3c]"
       >
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12">
           <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
@@ -449,39 +449,39 @@ export default function Home() {
               <h2 className="section-title mt-4">
                 Platforms tested in our research.
               </h2>
-              <p className="mt-6 max-w-md text-sm leading-6 text-[#5b6c82]">
+              <p className="mt-6 max-w-md text-sm leading-6 text-[#b8c9df]">
                 These platforms demonstrate technical capability and research
                 experience. They do not imply vendor endorsement, certification,
                 or a commercial customer relationship.
               </p>
             </div>
-            <div className="overflow-hidden border border-[#17335f]/10">
+            <div className="overflow-hidden border border-white/10">
               {evaluatedPlatforms.map((item, index) => (
                 <div
                   key={item.platform}
-                  className="grid gap-3 border-b border-[#17335f]/10 bg-[#f8fafc] p-5 last:border-b-0 sm:grid-cols-[.8fr_.6fr_1.6fr] sm:items-start sm:p-6"
+                  className="grid gap-3 border-b border-white/10 bg-[#0d2a55] p-5 last:border-b-0 sm:grid-cols-[.8fr_.6fr_1.6fr] sm:items-start sm:p-6"
                 >
                   <div>
-                    <span className="font-mono text-[9px] text-[#8091a8]">
+                    <span className="font-mono text-[9px] text-[#91add0]">
                       0{index + 1}
                     </span>
-                    <p className="mt-1 text-sm font-semibold text-[#0b2451]">
+                    <p className="mt-1 text-sm font-semibold text-white">
                       {item.platform}
                     </p>
                   </div>
                   <div>
-                    <p className="font-mono text-[9px] uppercase tracking-[.12em] text-[#8091a8]">
+                    <p className="font-mono text-[9px] uppercase tracking-[.12em] text-[#91add0]">
                       AI workload
                     </p>
-                    <p className="mt-2 text-xs text-[#53657d]">
+                    <p className="mt-2 text-xs text-[#b8c9df]">
                       {item.workload}
                     </p>
                   </div>
                   <div>
-                    <p className="font-mono text-[9px] uppercase tracking-[.12em] text-[#8091a8]">
+                    <p className="font-mono text-[9px] uppercase tracking-[.12em] text-[#91add0]">
                       Demonstrated capability
                     </p>
-                    <p className="mt-2 text-xs leading-5 text-[#53657d]">
+                    <p className="mt-2 text-xs leading-5 text-[#b8c9df]">
                       {item.capability}
                     </p>
                   </div>
@@ -494,7 +494,7 @@ export default function Home() {
 
       <section
         id="process"
-        className="border-y border-[#17335f]/10 bg-[#eef3f9]"
+        className="border-y border-white/10 bg-[#0a2147]"
       >
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
           <p className="eyebrow">Integrated evaluation process</p>
@@ -502,7 +502,7 @@ export default function Home() {
             <h2 className="section-title max-w-2xl">
               A complete assurance loop, not an isolated lab result.
             </h2>
-            <p className="max-w-md text-sm leading-6 text-[#5b6c82]">
+            <p className="max-w-md text-sm leading-6 text-[#b8c9df]">
               Use the full process or select the modules that match your
               development stage and security objectives.
             </p>
@@ -511,18 +511,18 @@ export default function Home() {
             {process.map(([number, title, text], index) => (
               <div
                 key={title}
-                className="relative rounded-2xl border border-[#0c2a58]/10 bg-[#f8fafc] p-5"
+                className="relative rounded-2xl border border-white/10 bg-[#0d2a55] p-5"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] font-semibold text-[#1269c7]">
+                  <span className="font-mono text-[10px] font-semibold text-[#38bdf8]">
                     {number}
                   </span>
                   {index < process.length - 1 && (
-                    <ArrowRight className="hidden size-4 text-[#8ba0bc] md:block" />
+                    <ArrowRight className="hidden size-4 text-[#91add0] md:block" />
                   )}
                 </div>
                 <h3 className="mt-8 text-sm font-semibold">{title}</h3>
-                <p className="mt-2 text-xs leading-5 text-[#667891]">{text}</p>
+                <p className="mt-2 text-xs leading-5 text-[#b8c9df]">{text}</p>
               </div>
             ))}
           </div>
@@ -543,7 +543,7 @@ export default function Home() {
               {sectors.map((sector) => (
                 <div
                   key={sector}
-                  className="flex min-h-22 items-end rounded-2xl border border-[#0c2a58]/10 bg-white p-4 text-sm font-medium shadow-sm"
+                  className="flex min-h-22 items-end rounded-2xl border border-white/10 bg-[#0d2a55] p-4 text-sm font-medium shadow-sm"
                 >
                   <span>{sector}</span>
                 </div>
@@ -584,7 +584,7 @@ export default function Home() {
 
       <section
         id="about-us"
-        className="scroll-mt-20 border-y border-[#17335f]/10 bg-white"
+        className="scroll-mt-20 border-y border-white/10 bg-[#081b3c]"
       >
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
@@ -593,20 +593,20 @@ export default function Home() {
               <h2 className="section-title mt-4">
                 Frontier research, translated for real products.
               </h2>
-              <p className="mt-6 text-base leading-7 text-[#5b6c82]">
+              <p className="mt-6 text-base leading-7 text-[#b8c9df]">
                 The team combines peer-reviewed AI-hardware attack research,
                 specialist laboratory experience, and expertise spanning
                 physical security, AI privacy, data science, and commercial
                 risk.
               </p>
-              <div className="mt-7 flex items-center gap-3 rounded-2xl bg-[#e7f1ff] p-4 text-sm font-medium text-[#184879]">
+              <div className="mt-7 flex items-center gap-3 rounded-2xl border border-[#38bdf8]/20 bg-[#38bdf8]/8 p-4 text-sm font-medium text-[#c9edff]">
                 <Microscope className="size-5 shrink-0" /> Originating from
                 research at Radboud University
               </div>
             </div>
-            <div className="grid gap-px overflow-hidden rounded-lg border border-[#0c2a58]/10 bg-[#0c2a58]/10 sm:grid-cols-2">
+            <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2">
               {team.map(([name, role, highlight, bio, profile, image]) => (
-                <div key={name} className="bg-[#f8fafc] p-6 sm:p-7">
+                <div key={name} className="bg-[#0d2a55] p-6 sm:p-7">
                   {image ? (
                     <img
                       src={image}
@@ -629,22 +629,22 @@ export default function Home() {
                       href={profile}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-base font-semibold text-[#0b2451] hover:text-[#1269c7]"
+                      className="inline-flex items-center gap-2 text-base font-semibold text-white hover:text-[#38bdf8]"
                       aria-label={`Open ${name}'s profile`}
                     >
                       {name}
-                      <ExternalLink className="size-3.5 text-[#1269c7]" />
+                      <ExternalLink className="size-3.5 text-[#38bdf8]" />
                     </a>
                   ) : (
-                    <p className="text-base font-semibold text-[#0b2451]">{name}</p>
+                    <p className="text-base font-semibold text-white">{name}</p>
                   )}
-                  <p className="mt-2 font-mono text-[9px] font-semibold uppercase tracking-[.12em] text-[#1269c7]">
+                  <p className="mt-2 font-mono text-[9px] font-semibold uppercase tracking-[.12em] text-[#38bdf8]">
                     {role}
                   </p>
-                  <p className="mt-5 text-sm font-semibold leading-6 text-[#0b2451]">
+                  <p className="mt-5 text-sm font-semibold leading-6 text-white">
                     {highlight}
                   </p>
-                  <p className="mt-2 text-sm leading-6 text-[#60738c]">{bio}</p>
+                  <p className="mt-2 text-sm leading-6 text-[#b8c9df]">{bio}</p>
                 </div>
               ))}
             </div>
@@ -654,16 +654,16 @@ export default function Home() {
 
       <section
         id="investors"
-        className="scroll-mt-20 border-b border-[#17335f]/10 bg-[#eef3f9]"
+        className="scroll-mt-20 border-b border-white/10 bg-[#0a2147]"
       >
         <div className="mx-auto grid max-w-7xl gap-6 px-5 py-12 sm:px-8 md:grid-cols-[.75fr_1.25fr] md:items-center lg:px-12">
           <div>
             <p className="eyebrow">Our investors</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-[-.035em] text-[#081b3c]">
+            <h2 className="mt-3 text-2xl font-semibold tracking-[-.035em] text-white">
               Investment partnerships in development.
             </h2>
           </div>
-          <p className="text-sm leading-6 text-[#5b6c82]">
+          <p className="text-sm leading-6 text-[#b8c9df]">
             The company is currently at the pre-seed stage. Confirmed investors
             and funding partners will be published here once agreements are
             complete.
@@ -672,7 +672,7 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-12">
-        <div className="overflow-hidden rounded-xl bg-[#38bdf8] p-7 text-[#0b2451] sm:p-11 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-14">
+        <div className="overflow-hidden rounded-xl border border-[#38bdf8]/25 bg-[#0d2a55] p-7 text-white sm:p-11 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-14">
           <div>
             <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.17em]">
               What we are looking for
@@ -680,7 +680,7 @@ export default function Home() {
             <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl">
               Build the evidence for secure AI hardware with us.
             </h2>
-            <p className="mt-5 max-w-2xl text-sm leading-6 text-[#2c527a]">
+            <p className="mt-5 max-w-2xl text-sm leading-6 text-[#b8c9df]">
               We are speaking with design partners, prospective customers,
               investors, and funding partners interested in shaping a rigorous,
               repeatable evaluation category.
@@ -700,7 +700,7 @@ export default function Home() {
               href="mailto:peter.horvath2@ru.nl?subject=Technical%20conversation%20about%20AI%20hardware%20security"
               className={cn(
                 buttonVariants({ variant: 'outline', size: 'lg' }),
-                'h-12 rounded-md border-[#0b2451]/20 bg-transparent px-6 hover:bg-white/30',
+                'h-12 rounded-md border-white/20 bg-transparent px-6 text-white hover:bg-white/10',
               )}
             >
               Technical conversation
