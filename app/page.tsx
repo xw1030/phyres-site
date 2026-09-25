@@ -134,7 +134,7 @@ const team = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#06152f] text-[#eef6ff]">
+    <main className="min-h-screen overflow-x-clip bg-[#06152f] text-[#eef6ff]">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#06152f]/95 backdrop-blur-xl">
         <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
           <a
