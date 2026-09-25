@@ -255,12 +255,12 @@ export default function Home() {
           className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,21,47,.97)_0%,rgba(6,21,47,.82)_42%,rgba(6,21,47,.28)_78%,rgba(6,21,47,.5)_100%)]"
           aria-hidden="true"
         />
-        <div className="relative mx-auto flex min-h-[680px] max-w-7xl items-center px-5 py-20 sm:px-8 lg:px-12">
-          <div className="max-w-3xl">
+        <div className="relative mx-auto flex min-h-[680px] max-w-7xl items-center justify-center px-5 py-20 text-center sm:px-8 lg:px-12">
+          <div className="mx-auto flex max-w-4xl flex-col items-center">
             <Badge className="mb-7 h-auto rounded-md border border-[#38bdf8]/30 bg-[#0b2451]/90 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#bceaff] shadow-sm">
               Physical security evaluation for AI hardware
             </Badge>
-            <h1 className="max-w-[780px] text-[clamp(3.15rem,6.5vw,6.4rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-[#f4f8ff]">
+            <h1 className="max-w-[900px] text-[clamp(3.15rem,6.5vw,6.4rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-[#f4f8ff]">
               Secure AI,
               <span className="block text-[#38bdf8]">down to the silicon.</span>
             </h1>
@@ -268,7 +268,7 @@ export default function Home() {
               We evaluate whether physical attacks can expose valuable AI models
               and sensitive data—or compromise AI execution on real hardware.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
               <a
                 href="mailto:xuewang1129@hotmail.com?subject=Discuss%20an%20AI%20hardware%20evaluation"
                 className={cn(
