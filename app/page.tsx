@@ -323,7 +323,7 @@ export default function Home() {
         id="solutions"
         className="mx-auto max-w-7xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28 lg:px-12"
       >
-        <div className="grid gap-8 lg:grid-cols-[.65fr_1.35fr] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[.72fr_1.28fr] lg:gap-16">
           <div>
             <p className="eyebrow">What we evaluate</p>
             <h2 className="section-title mt-4">
@@ -335,7 +335,15 @@ export default function Home() {
               whether the fix is effective.
             </p>
           </div>
-          <div className="grid gap-4">
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-[#081b3c] shadow-[0_18px_55px_rgba(0,0,0,.2)]">
+            <img
+              src="/what-we-evaluate-chip.png"
+              alt="Technical illustration of an AI accelerator package and its internal compute modules"
+              className="aspect-[16/9] h-full w-full object-cover"
+            />
+          </div>
+        </div>
+        <div className="mt-10 grid gap-4 lg:grid-cols-3">
             {services.map(
               ({ icon: Icon, number, title, description, detail }) => (
                 <Card
@@ -347,17 +355,19 @@ export default function Home() {
                         ? 'physical-leakage'
                         : 'mitigation'
                   }
-                  className="rounded-lg border-0 bg-[#0d2a55] py-0 shadow-[0_14px_45px_rgba(0,0,0,.18)] ring-1 ring-white/10"
+                  className="h-full rounded-lg border-0 bg-[#0d2a55] py-0 shadow-[0_14px_45px_rgba(0,0,0,.18)] ring-1 ring-white/10"
                 >
-                  <CardContent className="grid gap-5 p-6 sm:grid-cols-[48px_1fr_auto] sm:items-center sm:p-7">
-                    <span className="grid size-12 place-items-center rounded-lg bg-[#38bdf8]/10 text-[#38bdf8]">
-                      <Icon />
-                    </span>
-                    <div>
+                  <CardContent className="flex h-full flex-col p-6 sm:p-7">
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="grid size-12 place-items-center rounded-lg bg-[#38bdf8]/10 text-[#38bdf8]">
+                        <Icon />
+                      </span>
+                      <span className="font-mono text-[10px] text-[#91add0]">
+                        {number}
+                      </span>
+                    </div>
+                    <div className="mt-6">
                       <div className="flex items-baseline gap-3">
-                        <span className="font-mono text-[10px] text-[#91add0]">
-                          {number}
-                        </span>
                         <h3 className="text-lg font-semibold tracking-tight">
                           {title}
                         </h3>
@@ -366,14 +376,13 @@ export default function Home() {
                         {description}
                       </p>
                     </div>
-                    <p className="max-w-[175px] font-mono text-[10px] leading-5 uppercase tracking-[0.1em] text-[#91add0] sm:text-right">
+                    <p className="mt-6 border-t border-white/10 pt-5 font-mono text-[10px] leading-5 uppercase tracking-[0.1em] text-[#91add0]">
                       {detail}
                     </p>
                   </CardContent>
                 </Card>
               ),
             )}
-          </div>
         </div>
       </section>
 
