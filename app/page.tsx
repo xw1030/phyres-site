@@ -248,8 +248,14 @@ export default function Home() {
       </header>
 
       <section id="top" className="relative border-b border-white/10 bg-[#06152f]">
+        <img
+          src="/hero-em-signal.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-75"
+        />
         <div
-          className="signal-grid absolute inset-0 opacity-65"
+          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,21,47,.97)_0%,rgba(6,21,47,.82)_42%,rgba(6,21,47,.28)_78%,rgba(6,21,47,.5)_100%)]"
           aria-hidden="true"
         />
         <div className="relative mx-auto grid max-w-7xl gap-14 px-5 py-18 sm:px-8 sm:py-24 lg:grid-cols-[1.12fr_.88fr] lg:px-12 lg:py-30">
