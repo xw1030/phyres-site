@@ -66,6 +66,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-geist-sans), Arial, sans-serif;
+  }
+  body * {
+    font-family: inherit !important;
   }
   a {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
@@ -80,7 +84,6 @@
   mask-image: linear-gradient(to bottom, black, transparent 88%);
 }
 .eyebrow {
-  font-family: var(--font-geist-mono), monospace;
   font-size: 0.68rem;
   font-weight: 650;
   letter-spacing: 0.16em;
