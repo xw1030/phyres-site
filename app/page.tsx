@@ -1,5 +1,5 @@
 import {
-  ArrowRight, Bot, Car, CheckCircle2, CircuitBoard, Cpu, ExternalLink,
+  ArrowRight, Bot, Car, CheckCircle2, CircuitBoard, ExternalLink,
   Factory, HeartPulse, LockKeyhole, Mail, Microscope, Radar, RadioTower,
   Server, ShieldCheck, Sparkles, Zap,
 } from 'lucide-react';
@@ -47,11 +47,15 @@ function SignalTrace({ tone = 'blue' }: { tone?: string }) {
   return <svg aria-hidden="true" viewBox="0 0 320 42" className="h-10 w-full" preserveAspectRatio="none"><path d="M0 21H320" stroke="rgba(255,255,255,.08)"/><path d="M0 22 L28 22 L35 16 L39 30 L43 10 L47 28 L52 21 L88 21 L94 18 L100 24 L106 14 L111 31 L117 20 L151 20 L158 8 L164 34 L171 12 L178 27 L185 21 L222 21 L228 17 L233 25 L240 11 L247 31 L253 20 L320 20" fill="none" stroke={stroke} strokeWidth="1.6" vectorEffect="non-scaling-stroke"/></svg>;
 }
 
+function PhyresWordmark({ className }: { className?: string }) {
+  return <span className={cn('inline-block bg-[linear-gradient(105deg,#b9e8ff_0%,#52c7ff_38%,#2380df_68%,#0f5fb8_100%)] bg-clip-text font-black leading-none tracking-[-0.075em] text-transparent', className)}>phyres</span>;
+}
+
 export default function Home() {
   return <main className="min-h-screen overflow-x-clip bg-[#06152f] text-[#eef6ff]">
     <header className="sticky top-0 z-50 border-b border-white/8 bg-[#06152f]/95 backdrop-blur-xl">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
-        <a href="#top" className="flex items-center gap-3" aria-label="Phyres.ai home"><span className="grid size-9 place-items-center rounded-lg bg-[#0b2451] text-[#38bdf8]"><Cpu className="size-5"/></span><span className="text-[17px] font-semibold tracking-[-0.03em]">Phyres.ai</span></a>
+        <a href="#top" className="flex items-center" aria-label="Phyres.ai home"><PhyresWordmark className="text-2xl"/></a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-[#b8c9df] lg:flex" aria-label="Primary navigation">
           <a className="py-6 transition-colors hover:text-white" href="#solutions">Solutions</a><a className="py-6 transition-colors hover:text-white" href="#work-with-us">Work with us</a><a className="py-6 transition-colors hover:text-white" href="#evidence">Evidence</a><a className="py-6 transition-colors hover:text-white" href="#company">Company</a>
         </nav>
@@ -62,11 +66,10 @@ export default function Home() {
     <section id="top" className="relative border-b border-white/8 bg-[#06152f]">
       <img src="/hero-em-signal.png" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-center opacity-70"/>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,21,47,.98)_0%,rgba(6,21,47,.84)_44%,rgba(6,21,47,.32)_80%,rgba(6,21,47,.58)_100%)]" aria-hidden="true"/>
-      <div className="relative mx-auto flex min-h-[700px] max-w-7xl items-center justify-center px-5 py-20 text-center sm:px-8 lg:px-12"><div className="mx-auto flex max-w-5xl flex-col items-center">
-        <p className="mb-7 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7dd3fc]">Physical security evaluation for AI hardware</p>
-        <h1 className="max-w-[1100px] text-[clamp(3rem,5.8vw,5.8rem)] font-semibold leading-[0.98] tracking-[-0.06em] text-[#f4f8ff]"><span className="block">Phyres.ai — Secure AI,</span><span className="block text-[#38bdf8]">down to the silicon.</span></h1>
-        <p className="mt-8 max-w-3xl text-xl font-semibold leading-8 text-white sm:text-2xl">We connect physical leakage and faults to their impact on AI models, data and decisions.</p>
-        <p className="mt-3 max-w-2xl text-base leading-7 text-[#b8c9df] sm:text-lg">Evaluate whether physical attacks can expose valuable AI assets or compromise execution on real hardware.</p>
+      <div className="relative mx-auto flex min-h-[700px] max-w-7xl items-center justify-center px-5 py-20 text-center sm:px-8 lg:px-12"><div className="mx-auto flex max-w-6xl flex-col items-center">
+        <PhyresWordmark className="text-[clamp(5rem,10vw,9rem)]"/>
+        <h1 className="mt-5 text-[clamp(2.5rem,5.2vw,5.15rem)] font-semibold leading-[0.98] tracking-[-0.06em] text-[#f4f8ff] lg:whitespace-nowrap">Secure AI, <span className="text-[#38bdf8]">down to the silicon.</span></h1>
+        <p className="mt-9 max-w-3xl text-xl font-semibold leading-8 text-white sm:text-2xl">We connect physical leakage and faults to their impact on AI models, data and decisions.</p>
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><a href={mailto} className={cn(buttonVariants({ size: 'lg' }), 'h-12 rounded-md bg-[#1269c7] px-6 text-white hover:bg-[#0d5eae]')}>Discuss an evaluation <ArrowRight/></a><a href="#process" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'h-12 rounded-md border-white/20 bg-white/5 px-6 text-white hover:bg-white/10')}>Explore our approach</a></div>
       </div></div>
     </section>
@@ -97,6 +100,6 @@ export default function Home() {
 
     <section id="work-with-us" className="mx-auto max-w-7xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28 lg:px-12"><div className="bg-[#0d2a55] p-7 sm:p-11 lg:grid lg:grid-cols-[1fr_auto] lg:items-end lg:gap-14"><div><p className="eyebrow">Work with us</p><h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-5xl">Evaluate a real device, workload or protection claim.</h2><p className="mt-5 max-w-2xl text-sm leading-6 text-[#b8c9df]">We are speaking with design partners, prospective customers, investors and funding partners interested in rigorous, repeatable AI-hardware assurance.</p></div><div className="mt-8 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-col"><a href={mailto} className={cn(buttonVariants({ size: 'lg' }), 'h-12 rounded-md bg-[#1269c7] px-6 text-white hover:bg-[#2380df]')}>Discuss an evaluation <ArrowRight/></a><a href="#process" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'h-12 rounded-md border-white/20 bg-transparent px-6 text-white hover:bg-white/10')}>Explore our approach</a></div></div></section>
 
-    <footer className="border-t border-white/8 bg-[#081b3c] text-white"><div className="mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:px-8 md:grid-cols-[1fr_auto] md:items-end lg:px-12"><div><div className="flex items-center gap-3"><span className="grid size-9 place-items-center rounded-lg bg-[#38bdf8] text-[#0b2451]"><Cpu className="size-5"/></span><span className="font-semibold">Phyres.ai</span></div><p className="mt-4 max-w-md text-xs leading-5 text-[#a9bdd5]">Independent evaluation for the confidentiality, integrity and safe operation of AI on real hardware.</p></div><div className="space-y-2 text-xs text-[#b5c6dc] md:text-right"><a className="flex items-center gap-2 hover:text-white md:justify-end" href="mailto:xuewang1129@hotmail.com"><Mail className="size-3.5"/> xuewang1129@hotmail.com</a><a className="flex items-center gap-2 hover:text-white md:justify-end" href="mailto:peter.horvath2@ru.nl"><Mail className="size-3.5"/> peter.horvath2@ru.nl</a></div></div></footer>
+    <footer className="border-t border-white/8 bg-[#081b3c] text-white"><div className="mx-auto grid max-w-7xl gap-10 px-5 py-10 sm:px-8 md:grid-cols-[1fr_auto] md:items-end lg:px-12"><div><PhyresWordmark className="text-3xl"/><p className="mt-4 max-w-md text-xs leading-5 text-[#a9bdd5]">Independent evaluation for the confidentiality, integrity and safe operation of AI on real hardware.</p></div><div className="space-y-2 text-xs text-[#b5c6dc] md:text-right"><a className="flex items-center gap-2 hover:text-white md:justify-end" href="mailto:xuewang1129@hotmail.com"><Mail className="size-3.5"/> xuewang1129@hotmail.com</a><a className="flex items-center gap-2 hover:text-white md:justify-end" href="mailto:peter.horvath2@ru.nl"><Mail className="size-3.5"/> peter.horvath2@ru.nl</a></div></div></footer>
   </main>;
 }
