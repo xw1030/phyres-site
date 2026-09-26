@@ -48,7 +48,7 @@ function SignalTrace({ tone = 'blue' }: { tone?: string }) {
 }
 
 function PhyresWordmark({ className }: { className?: string }) {
-  return <span className={cn('inline-block bg-[linear-gradient(105deg,#b9e8ff_0%,#52c7ff_38%,#2380df_68%,#0f5fb8_100%)] bg-clip-text font-black leading-none tracking-[-0.075em] text-transparent', className)}>phyres</span>;
+  return <span className={cn('inline-flex items-baseline font-bold leading-none tracking-[-0.09em]', className)}><span className="text-[#9edfff]">phy</span><span className="text-[#2380df]">res</span></span>;
 }
 
 export default function Home() {
@@ -67,7 +67,7 @@ export default function Home() {
       <img src="/hero-em-signal.png" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-x-[-1] object-cover object-center opacity-70"/>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,21,47,.98)_0%,rgba(6,21,47,.84)_44%,rgba(6,21,47,.32)_80%,rgba(6,21,47,.58)_100%)]" aria-hidden="true"/>
       <div className="relative mx-auto flex min-h-[700px] max-w-7xl items-center justify-center px-5 py-20 text-center sm:px-8 lg:px-12"><div className="mx-auto flex max-w-6xl flex-col items-center">
-        <PhyresWordmark className="text-[clamp(5rem,10vw,9rem)]"/>
+        <PhyresWordmark className="text-[clamp(4rem,7vw,6.25rem)]"/>
         <h1 className="mt-5 text-[clamp(2.5rem,5.2vw,5.15rem)] font-semibold leading-[0.98] tracking-[-0.06em] text-[#f4f8ff] lg:whitespace-nowrap">Secure AI, <span className="text-[#38bdf8]">down to the silicon.</span></h1>
         <p className="mt-9 max-w-3xl text-xl font-semibold leading-8 text-white sm:text-2xl">We connect physical leakage and faults to their impact on AI models, data and decisions.</p>
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row"><a href={mailto} className={cn(buttonVariants({ size: 'lg' }), 'h-12 rounded-md bg-[#1269c7] px-6 text-white hover:bg-[#0d5eae]')}>Discuss an evaluation <ArrowRight/></a><a href="#process" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'h-12 rounded-md border-white/20 bg-white/5 px-6 text-white hover:bg-white/10')}>Explore our approach</a></div>
