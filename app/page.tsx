@@ -48,7 +48,7 @@ function SignalTrace({ tone = 'blue' }: { tone?: string }) {
 }
 
 function PhyresWordmark({ className }: { className?: string }) {
-  return <span className={cn('inline-flex origin-center scale-x-[0.84] items-baseline font-semibold leading-none tracking-[0.025em]', className)}><span className="text-[#9edfff]">phy</span><span className="text-[#2380df]">res</span></span>;
+  return <span className={cn('inline-block origin-center scale-x-[0.84] bg-gradient-to-r from-[#bcecff] via-[#55bff2] to-[#237bd3] bg-clip-text font-bold leading-none tracking-[0.035em] text-transparent', className)}>phyres</span>;
 }
 
 export default function Home() {
