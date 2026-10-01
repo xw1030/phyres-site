@@ -12,6 +12,8 @@ export default function BlackWhitePreview() {
     </header>
 
     <section id="top" className={styles.hero}>
+      <img className={styles.emBackground} src="/hero-em-signal.png" alt="" aria-hidden="true"/>
+      <div className={styles.emOverlay} aria-hidden="true"/>
       <svg className={styles.signal} viewBox="0 0 1000 180" aria-hidden="true">
         <path d="M0 95h120l20-15 17 48 21-93 24 112 25-52h170l24-18 22 38 29-80 30 111 32-51h185l20-21 25 46 25-85 30 111 26-51h153"/>
       </svg>
