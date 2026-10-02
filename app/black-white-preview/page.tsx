@@ -42,7 +42,7 @@ export default function BlackWhitePreview() {
     <section id="evaluate" className={`${styles.evaluate} ${tune.compactEvaluate} ${adjust.evaluate}`}>
       <div className={`${styles.titleBlock} ${tune.leftTitle}`}><p className={styles.eyebrowDark}>What we evaluate</p><h2>From physical signal<br/>to product decision.</h2></div>
       <p className={styles.statement}>We do more than show that a signal or fault exists. We determine what it means for the AI workload.</p>
-      <div className={styles.services}>
+      <div className={`${styles.services} ${adjust.centeredServices}`}>
         <article><span>01</span><Zap/><div><h3 className={service.serviceTitle}>Fault injection & integrity</h3><p className={service.serviceCopy}>Can a physical disturbance alter AI outputs, bypass controls or compromise a safety-relevant decision?</p></div></article>
         <article><span>02</span><Radar/><div><h3 className={service.serviceTitle}>Physical leakage</h3><p className={service.serviceCopy}>Does execution expose model architecture, weights, inputs, outputs or other protected assets?</p></div></article>
         <article><span>03</span><ShieldCheck/><div><h3 className={service.serviceTitle}>Mitigation & retesting</h3><p className={service.serviceCopy}>Do hardware, runtime or software countermeasures measurably reduce the exposure?</p></div></article>
