@@ -3,6 +3,7 @@ import styles from './preview.module.css';
 import full from './full.module.css';
 import tune from './tuning.module.css';
 import service from './service.module.css';
+import adjust from './adjustments.module.css';
 
 const mailto = 'mailto:xuewang1129@hotmail.com?subject=Discuss%20an%20AI%20hardware%20evaluation';
 
@@ -38,7 +39,7 @@ export default function BlackWhitePreview() {
       </div>
     </section>
 
-    <section id="evaluate" className={`${styles.evaluate} ${tune.compactEvaluate}`}>
+    <section id="evaluate" className={`${styles.evaluate} ${tune.compactEvaluate} ${adjust.evaluate}`}>
       <div className={`${styles.titleBlock} ${tune.leftTitle}`}><p className={styles.eyebrowDark}>What we evaluate</p><h2>From physical signal<br/>to product decision.</h2></div>
       <p className={styles.statement}>We do more than show that a signal or fault exists. We determine what it means for the AI workload.</p>
       <div className={styles.services}>
@@ -48,15 +49,15 @@ export default function BlackWhitePreview() {
       </div>
     </section>
 
-    <section id="workflow" className={`${full.workflow} ${tune.compactDark}`}><div className={`${full.darkIntro} ${tune.leftDarkIntro}`}><p className={styles.eyebrow}>Evaluation workflow</p><h2>A complete<br/>assurance loop.</h2><p>Physical measurements become AI-level findings, mitigations and verified evidence.</p></div><div className={`${full.workflowList} ${tune.compactWorkflow}`}>{workflow.map(([number,title,text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+    <section id="workflow" className={`${full.workflow} ${tune.compactDark} ${adjust.workflow}`}><div className={`${full.darkIntro} ${tune.leftDarkIntro}`}><p className={styles.eyebrow}>Evaluation workflow</p><h2>A complete<br/>assurance loop.</h2><p>Physical measurements become AI-level findings, mitigations and verified evidence.</p></div><div className={`${full.workflowList} ${tune.compactWorkflow}`}>{workflow.map(([number,title,text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></section>
 
-    <section id="evidence" className={`${full.evidence} ${tune.compactLight}`}><div className={`${styles.titleBlock} ${tune.leftTitle}`}><p className={styles.eyebrowDark}>Evidence</p><h2>Tested on<br/>real hardware.</h2></div><p className={`${full.evidenceLead} ${tune.leftLead}`}>Peer-reviewed work demonstrates the team’s capability across GPUs, FPGAs and embedded processors.</p><div className={full.evidenceList}>{evidence.map(([publication,title,attack,hardware,result,href],index) => <a href={href} target="_blank" rel="noreferrer" key={title}><span className={full.rowNo}>{String(index+1).padStart(2,'0')}</span><div className={full.paper}><p>{publication}</p><h3>{title}</h3><p>{result}</p></div><div className={full.spec}><p><b>Attack</b>{attack}</p><p><b>Hardware</b>{hardware}</p></div><ExternalLink/></a>)}</div></section>
+    <section id="evidence" className={`${full.evidence} ${tune.compactLight} ${adjust.evidence}`}><div className={`${styles.titleBlock} ${tune.leftTitle}`}><p className={styles.eyebrowDark}>Evidence</p><h2>Tested on real hardware.</h2></div><p className={`${full.evidenceLead} ${tune.leftLead}`}>Peer-reviewed work demonstrates the team’s capability across GPUs, FPGAs and embedded processors.</p><div className={full.evidenceList}>{evidence.map(([publication,title,attack,hardware,result,href],index) => <a href={href} target="_blank" rel="noreferrer" key={title}><span className={full.rowNo}>{String(index+1).padStart(2,'0')}</span><div className={full.paper}><p>{publication}</p><h3>{title}</h3><p>{result}</p></div><div className={full.spec}><p><b>Attack</b>{attack}</p><p><b>Hardware</b>{hardware}</p></div><ExternalLink/></a>)}</div></section>
 
-    <section className={`${full.context} ${tune.compactContext}`}><img src="/what-we-evaluate-chip.png" alt="Technical illustration of an AI accelerator package"/><div className={full.contextOverlay}/><div className={full.contextCopy}><p className={styles.eyebrow}>Where it matters</p><h2>High-value AI.<br/>Real-world consequences.</h2><p>Particularly relevant where valuable models, sensitive data or safety-critical decisions execute on-device.</p></div></section>
+    <section className={`${full.context} ${tune.compactContext} ${adjust.context}`}><img src="/what-we-evaluate-chip.png" alt="Technical illustration of an AI accelerator package"/><div className={full.contextOverlay}/><div className={full.contextCopy}><p className={styles.eyebrow}>Where it matters</p><h2>High-value AI.<br/>Real-world consequences.</h2><p>Particularly relevant where valuable models, sensitive data or safety-critical decisions execute on-device.</p></div></section>
 
     <section className={`${full.sectors} ${tune.compactSectors}`}>{[[CircuitBoard,'AI chips & accelerators'],[Car,'Automotive & mobility'],[HeartPulse,'Medical devices'],[Factory,'Industrial systems'],[Bot,'Robotics & edge sensing'],[Server,'AI infrastructure']].map(([Icon,label]) => { const I = Icon as typeof CircuitBoard; return <div key={label as string}><I/><span>{label as string}</span></div> })}</section>
 
-    <section id="company" className={`${full.company} ${tune.compactDark}`}><div className={`${full.darkIntro} ${tune.leftDarkIntro}`}><p className={styles.eyebrow}>Company</p><h2>Research-led.<br/>Built for deployment.</h2><p>A founding team spanning physical hardware security, AI privacy, product evaluation and commercial development.</p></div><div className={`${full.team} ${tune.leftTeam}`}>{team.map(([name,role,bio,profile]) => <article key={name}>{profile ? <a href={profile} target="_blank" rel="noreferrer"><h3>{name}</h3><ExternalLink/></a> : <h3>{name}</h3>}<p className={full.role}>{role}</p><p>{bio}</p></article>)}</div><div className={full.funding}><p className={styles.eyebrow}>Funding & partnerships</p><p>We are engaging with strategic investors and funding partners as we move from research validation to customer pilots.</p></div></section>
+    <section id="company" className={`${full.company} ${tune.compactDark} ${adjust.company}`}><div className={`${full.darkIntro} ${tune.leftDarkIntro}`}><p className={styles.eyebrow}>Company</p><h2>Research-led.<br/>Built for deployment.</h2><p>A founding team spanning physical hardware security, AI privacy, product evaluation and commercial development.</p></div><div className={`${full.team} ${tune.leftTeam}`}>{team.map(([name,role,bio,profile]) => <article key={name}><div className={adjust.memberLine}>{profile ? <a href={profile} target="_blank" rel="noreferrer"><h3>{name}</h3><ExternalLink/></a> : <h3>{name}</h3>}<span>{role}</span></div><p className={adjust.memberBio}>{bio}</p></article>)}</div><div className={full.funding}><p className={styles.eyebrow}>Funding & partnerships</p><p>We are engaging with strategic investors and funding partners as we move from research validation to customer pilots.</p></div></section>
 
     <section id="contact" className={`${full.contact} ${tune.compactContact}`}><p className={styles.eyebrowDark}>Work with us</p><h2>Evaluate a real device,<br/>workload or protection claim.</h2><a className={full.darkButton} href={mailto}>Discuss an evaluation <ArrowRight/></a></section>
 

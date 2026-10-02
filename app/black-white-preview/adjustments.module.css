@@ -1,0 +1,18 @@
+.evaluate > p { margin-left: 0 !important; }
+.workflow h2 { font-size: clamp(3.2rem, 6.2vw, 6.2rem) !important; }
+.workflow article > span { color: #e3000b !important; font-size: 15px !important; font-weight: 700; }
+.workflow article h3 { font-size: 19px !important; }
+.workflow article p { font-size: 14px !important; }
+.evidence h2 { white-space: nowrap; font-size: clamp(2.9rem, 5.2vw, 5.2rem) !important; }
+.evidence article h3, .evidence a h3 { font-size: 20px !important; }
+.evidence a > span { color: #e3000b !important; font-weight: 700; }
+.evidence a:hover { box-shadow: inset 3px 0 0 #e3000b; }
+.context h2 { font-size: clamp(3.4rem, 6.3vw, 6.4rem) !important; }
+.company h2 { font-size: clamp(3rem, 5.4vw, 5.5rem) !important; }
+.memberLine { display: flex; align-items: baseline; gap: 16px; min-width: 0; }
+.memberLine > a { display: inline-flex; align-items: center; gap: 8px; flex: none; }
+.memberLine h3 { margin: 0 !important; font-size: 19px !important; }
+.memberLine > span { color: #e3000b; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.memberBio { margin: 7px 0 0 !important; max-width: none !important; white-space: nowrap; font-size: 13px !important; }
+@media (max-width: 900px) { .memberBio { white-space: normal; } .memberLine { align-items: flex-start; flex-direction: column; gap: 5px; } }
+@media (max-width: 760px) { .evidence h2 { white-space: normal; } .workflow h2,.context h2,.company h2 { font-size: clamp(2.7rem, 12vw, 4.6rem) !important; } }
